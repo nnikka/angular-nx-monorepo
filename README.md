@@ -12,3 +12,14 @@ nx add @angular-architects/module-federation --project shell --type host --port 
 
 # Add module federation app Remote
 nx add @angular-architects/module-federation --project mfe1 --type remote --port 9301
+
+# Create component with NX cli
+nx g @nx/angular:component apps/mfe1/src/app/pg1/pg1 --style=scss
+
+
+
+
+# LINKS & TUTORIALS
+
+# Add lint restrictions to libs and apps
+https://www.angulararchitects.io/en/blog/using-module-federation-with-monorepos-and-angular/
