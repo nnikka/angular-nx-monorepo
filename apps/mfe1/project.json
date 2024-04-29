@@ -1,23 +1,23 @@
 {
-  "name": "monorepo",
+  "name": "mfe1",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/monorepo/src",
+  "sourceRoot": "apps/mfe1/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/monorepo/browser",
-        "index": "apps/monorepo/src/index.html",
-        "main": "apps/monorepo/src/main.ts",
+        "outputPath": "dist/apps/mfe1/browser",
+        "index": "apps/mfe1/src/index.html",
+        "main": "apps/mfe1/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/monorepo/tsconfig.app.json",
+        "tsConfig": "apps/mfe1/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/monorepo/src/favicon.ico", "apps/monorepo/src/assets"],
-        "styles": ["apps/monorepo/src/styles.scss"],
+        "assets": ["apps/mfe1/src/favicon.ico", "apps/mfe1/src/assets"],
+        "styles": ["apps/mfe1/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -51,10 +51,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "monorepo:build:production"
+          "buildTarget": "mfe1:build:production"
         },
         "development": {
-          "buildTarget": "monorepo:build:development"
+          "buildTarget": "mfe1:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -62,7 +62,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "monorepo:build"
+        "buildTarget": "mfe1:build"
       }
     },
     "lint": {
@@ -72,16 +72,16 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/monorepo/jest.config.ts"
+        "jestConfig": "apps/mfe1/jest.config.ts"
       }
     },
     "server": {
       "dependsOn": ["build"],
       "executor": "@angular-devkit/build-angular:server",
       "options": {
-        "outputPath": "dist/apps/monorepo/server",
-        "main": "apps/monorepo/server.ts",
-        "tsConfig": "apps/monorepo/tsconfig.server.json",
+        "outputPath": "dist/apps/mfe1/server",
+        "main": "apps/mfe1/server.ts",
+        "tsConfig": "apps/mfe1/tsconfig.server.json",
         "inlineStyleLanguage": "scss"
       },
       "configurations": {
@@ -102,12 +102,12 @@
       "executor": "@angular-devkit/build-angular:ssr-dev-server",
       "configurations": {
         "development": {
-          "browserTarget": "monorepo:build:development",
-          "serverTarget": "monorepo:server:development"
+          "browserTarget": "mfe1:build:development",
+          "serverTarget": "mfe1:server:development"
         },
         "production": {
-          "browserTarget": "monorepo:build:production",
-          "serverTarget": "monorepo:server:production"
+          "browserTarget": "mfe1:build:production",
+          "serverTarget": "mfe1:server:production"
         }
       },
       "defaultConfiguration": "development"
@@ -119,12 +119,12 @@
       },
       "configurations": {
         "development": {
-          "browserTarget": "monorepo:build:development",
-          "serverTarget": "monorepo:server:development"
+          "browserTarget": "mfe1:build:development",
+          "serverTarget": "mfe1:server:development"
         },
         "production": {
-          "browserTarget": "monorepo:build:production",
-          "serverTarget": "monorepo:server:production"
+          "browserTarget": "mfe1:build:production",
+          "serverTarget": "mfe1:server:production"
         }
       },
       "defaultConfiguration": "production"

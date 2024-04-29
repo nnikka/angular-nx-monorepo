@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'monorepo',
+  displayName: 'mfe1',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/monorepo',
+  coverageDirectory: '../../coverage/apps/mfe1',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
